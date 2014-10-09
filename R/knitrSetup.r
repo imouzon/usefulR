@@ -15,22 +15,22 @@ knitrSetup = function(rootDir = FALSE, use.tikz = FALSE){
    cache.use.time = FALSE
 
    #store figures in the fig folder, prefix with 'graphics-'
-   fig.folder = paste(rootDir,'/out/figures/',sep='')
+   fig.folder = paste0(rootDir,'/figures/')
    if(fig.use.time){
-      fig.prefix = paste('figure_',format(Sys.time(),'%m-%d'),sep='')
+      fig.prefix = paste0('figure_',format(Sys.time(),'%m-%d','_'))
    }else{
       fig.prefix = 'figure_'
    }
-   fig.path = paste(fig.folder,fig.prefix,'_',sep='')
+   fig.path = paste0(fig.folder,fig.prefix,'_')
 
-   #cahced output stored in cache.path
-   cache.folder = paste(rootDir,'/out/cache/',sep='')
+   #cached output stored in cache.path
+   cache.folder = paste0(rootDir,'/out/cache/')
    if(cache.use.time){
-      cache.prefix = paste('out_',format(Sys.time(),'%m-%d'),sep='')
+      cache.prefix = paste0('out_',format(Sys.time(),'%m-%d'))
    }else{
       cache.prefix = 'out_'
    }
-   cache.path = paste(cache.folder,cache.prefix,'_',sep='')
+   cache.path = paste0(cache.folder,cache.prefix,'_')
 
    options(replace.assign=TRUE,width=50)
 
@@ -43,20 +43,16 @@ knitrSetup = function(rootDir = FALSE, use.tikz = FALSE){
       fig.align='center', 
       fig.width=fig.w, 
       fig.height=fig.h, 
-      #fig.show='hold', 
-      #crop=TRUE,
+      fig.show='hold', 
+      crop=TRUE,
+      tidy=TRUE,
       fig.pos = 'h',
       par=TRUE
    )
 
-   #other options
-   opts_chunk$set(
-      tidy=TRUE
-   )
-
    if(use.tikz != FALSE){
-      #library(tikzDevice)
-      #options(tikzLatex = '/opt/local/bin/pdflatex')
+      require(tikzDevice)
+      options(tikzLatex = '/opt/local/bin/pdflatex')
       opts_chunk$set(dev='tikz', sanitize=TRUE,crop=TRUE)
       knit_hooks$set(par=function(before, options, envir){if(before && options$fig.show!='none') par(mar=c(4,4,.1,.1), cex.lab=.95, cex.axis=.9, mgp=c(2,.7,0), tcl=-.3)}, crop=hook_pdfcrop)
       knit_hooks$set(true.font=function(before,options,envir) if(before && !is.null(options$out.width)) dev.args = list(pointsize=10*as.numeric(strsplit(options$out.width,'\\\\')[[1]][1])))
