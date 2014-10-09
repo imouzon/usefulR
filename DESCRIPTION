@@ -1,0 +1,8 @@
+Package: usefulR
+Title: A personal R package
+Description: A place for useful bits of code that I find my self writing
+    repeatedly
+Version: 0.1
+Author: Ian Mouzon <imouzon@iastate.edu>
+Maintainer: Ian Mouzon <imouzon@iastate.edu>
+License: MIT

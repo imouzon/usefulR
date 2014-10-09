@@ -1,0 +1,250 @@
+unlist(strsplit('course: dogs and cats',':'))
+unlist(strsplit('course: dogs and cats',':\s'))
+unlist(strsplit('course: dogs and cats',':\\s\\+'))
+unlist(strsplit('course: dogs and cats',':\\s'))
+unlist(strsplit('course:  dogs and cats',':\\s'))
+unlist(strsplit('course:  dogs and cats',':\\s\\.'))
+unlist(strsplit('course:  dogs and cats',':\\s\\*'))
+unlist(strsplit('course:  dogs and cats',':\\s\\+'))
+unlist(strsplit('course:  dogs and cats',':\\s+'))
+unlist(strsplit('course: dogs and cats',':\\s+'))
+unlist(strsplit('course:dogs and cats',':\\s+'))
+unlist(strsplit('dogs mcgee, ian mouzon',',\\s+'))
+TeX.WritersContact = unlist(strsplit('dogs mcgee, ian mouzon',',\\s+'))
+TeX.WritersContact
+TeX.Writers.short = sapply(1:length(TeX.Writers.short),function(x) unlist(strsplit(TeX.Writers,'\\s+'))[length(unlist(strsplit(TeX.Writers,'\\s+')))])
+TeX.Writers.short = sapply(1:length(TeX.Writers),function(x) unlist(strsplit(TeX.Writers,'\\s+'))[length(unlist(strsplit(TeX.Writers,'\\s+')))])
+TeX.Writers.short = sapply(1:length(TeX.Writers),function(x) unlist(strsplit(TeX.Writers[x],'\\s+'))[length(unlist(strsplit(TeX.Writers[x],'\\s+')))])
+TeX.Writers.short = sapply(1:length(TeX.Writers),function(x) paste(unlist(strsplit(TeX.Writers[x],'\\s+'))[2:length(unlist(strsplit(TeX.Writers[x],'\\s+')))]),' ')
+TeX.Writers = unlist(strsplit('dogs mcgee, ian mouzon',',\\s+'))
+for(i in 1:length(TeX.Writers)){
+TeX.Writers.short = sapply(1:length(TeX.Writers),function(x) paste(unlist(strsplit(TeX.Writers[x],'\\s+'))[2:length(unlist(strsplit(TeX.Writers[x],'\\s+')))]))
+TeX.Writers = unlist(strsplit('dogs mcgee, jr.; ian mouzon',';\\s+'))
+strsplit(TeX.Writers[x],'\\s+'))
+x = 1
+unlist(
+strsplit(TeX.Writers[x],'\\s+')
+)
+unlist(strsplit(TeX.Writers[x],'\\s+'))
+unlist(strsplit(TeX.Writers[x],'\\s+'))[2:length(unlist(strsplit(TeX.Writers[x],'\\s+')))])
+unlist(strsplit(TeX.Writers[x],'\\s+'))[2:length(unlist(strsplit(TeX.Writers[x],'\\s+')))]
+paste(unlist(strsplit(TeX.Writers[x],'\\s+'))[2:length(unlist(strsplit(TeX.Writers[x],'\\s+')))])
+paste(unlist(strsplit(TeX.Writers[x],'\\s+'))[2:length(unlist(strsplit(TeX.Writers[x],'\\s+')))],collapse = ' ')
+TeX.Writers 'dogs mcgee, jr., ian mouzon'
+TeX.Writers = gsub(';\\s+\',';',TeX.Writers)
+TeX.Writers =
+TeX.Writers = gsub(',',';',TeX.Writers)
+gsub(';\\s+\\l+.;',',',TeX.Writers)
+grep(';\\s+',TeX.Writers)
+grepl(';\\s+',TeX.Writers)
+grepl(';\\s+\\l+',TeX.Writers)
+grepl(';\\l+',TeX.Writers)
+grepl('\\l+',TeX.Writers)
+grepl('\\u+',TeX.Writers)
+grepl('\\U+',TeX.Writers)
+grepl('\\u+','dogs')
+grepl('\\l+','dogs')
+grepl('\\l','dogs')
+grepl('\\U','dogs')
+grepl('\\u','dogs')
+grepl('\\u+','Dogs')
+grepl('\\u','Dogs')
+grepl(';','Dogs; jr.; cats mcgill')
+grepl(';(*)\\.;','Dogs; jr.; cats mcgill')
+grepl(';\\(*\\)\\.;','Dogs; jr.; cats mcgill')
+grepl(';\(*\)\\.;','Dogs; jr.; cats mcgill')
+grepl(';\\(\\*\\)\\.;','Dogs; jr.; cats mcgill')
+grepl(';\\(*.)\\.;','Dogs; jr.; cats mcgill')
+grepl(';\\(*.\\)\\.;','Dogs; jr.; cats mcgill')
+grepl(';(*.)\\.;','Dogs; jr.; cats mcgill')
+grepl(';(*.).;','Dogs; jr.; cats mcgill')
+grepl(';(*.);','Dogs; jr.; cats mcgill')
+grepl(';(*.)','Dogs; jr.; cats mcgill')
+gsub(';(*.)','cows','Dogs; jr.; cats mcgill')
+grepl('.',TeX.Writers)
+if(grep('\\.',TeX.Writers[i])) TeX.Writers[i-1] = paste(TeX.Writers[i-1],TeX.Writers[i],sep=', ')
+grep('\\.',TeX.Writers[i])
+i = 2
+if(grep('\\.',TeX.Writers[i])){
+i = 3
+grepl(',',TeX.Writers)
+!grepl('\\.',TeX.Writers) & grepl(',',TeX.Writers)
+grepl('\\.',TeX.Writers) & grepl(',',TeX.Writers)
+grepl('\\.',TeX.Writers)
+!grepl('\\.',TeX.Writers) || grepl(',',TeX.Writers)
+!grepl('\\.',TeX.Writers)
+!grepl('\\.',TeX.Writers) | grepl(',',TeX.Writers)
+TeX.Writers[!grepl('\\.',TeX.Writers) | grepl(',',TeX.Writers)]
+sapply(1:length(TeX.Writers),function(x) paste(unlist(strsplit(TeX.Writers[x],'\\s+'))[2:length(unlist(strsplit(TeX.Writers[x],'\\s+')))],collapse = ' '))
+paste('\\blue{',TeX.Writers,'}',sep='',collapse = ',')
+TeX.Writers = unlist(strsplit('dogs mcgee, jr., ian mouzon',',\\s+'))
+TeX.Writers = 'dogs mcgee, jr., ian mouzon'
+Tex.Writers = 'dogs mcggee, jr., cats fish-birds, ian mouzon'
+TeX.Writers
+TeX.Writers.short = sapply(1:length(TeX.Writers),function(x) paste(unlist(strsplit(TeX.Writers[x],'\\s+'))[2:length(unlist(strsplit(TeX.Writers[x],'\\s+')))],collapse = ' '))
+TeX.Writers.short
+TeX.Writers.contact = gsub(',','}, \\blue{',contact,sep='')
+TeX.Writers.contact = gsub(',','}, \\blue{',contact)
+TeX.Writers.contact = gsub(',','}, \\\\blue{',contact)
+TeX.Writers.contact = gsub(',','}, \\\\textcolor{blue}{',contact)
+TeX.Writers.contact = gsub(', ','}, \\\\textcolor{blue}{',contact)
+TeX.Writers.long = paste('\\textcolor{blue}{',TeX.Writers.contact,'}',sep='',collapse = ',')
+TeX.Writers.long = paste('\\textcolor{blue}{',TeX.Writers,'}',sep='',collapse = ',')
+TeX.Writers = unlist(strsplit(writers,',\\s+'))
+for(i in 2:length(TeX.Writers)){
+if(grepl('\\.',TeX.Writers[i])){
+TeX.Writers[i-1] = paste(TeX.Writers[i-1],TeX.Writers[i],sep=', ')
+TeX.Writers = TeX.Writers[!grepl('\\.',TeX.Writers) | grepl(',',TeX.Writers)]
+TeX.Writers.short = paste(sapply(1:length(TeX.Writers),function(x) paste(unlist(strsplit(TeX.Writers[x],'\\s+'))[2:length(unlist(strsplit(TeX.Writers[x],'\\s+')))],collapse = ' ')),collapse = ', ')
+TeX.Writers.long = paste(TeX.Writers,collapse = ', ')
+TeX.Writers.contact = gsub(',\\s+','}, \\\\textcolor{blue}{',contact)
+TeX.Writers.contact = paste('\\textcolor{blue}{',TeX.Writers.contact,'}',sep='',collapse = ',')
+TeX.Writers.long
+writers.long = ''
+writers.short = ''
+writers
+writers.long
+writers.short
+TeX.Writers.long = gsub("R.WritersLong",writers.long,"\\newcommand{\\WritersLong}{R.WritersLong}")
+if(contact != ''){
+contact
+contact = paste('\\textcolor{blue}{',contact,'}',sep='',collapse = ',')
+contact = gsub(',\\s+','}, \\\\textcolor{blue}{',contact)
+TeX.Writers.contact = gsub('R.WritersContact',contact,'\\newcommand{\\WritersContact}{R.WritersContact}')
+TeX.Writers.contact
+TeX.Writers.short = gsub("R.WritersShort",writers.short,"\\newcommand{\\WritersShort}{R.WritersShort}")
+writers = 'dogs mcggee, jr., cats fish-birds, ian mouzon'
+contact = 'imouzon@gjgj.com, fkdljf@kdd.com'
+TeX_hw_writer_info = paste("%Writer Information",'\\n',
+TeX.writers.short,'\\n',
+TeX.writers.long,'\\n',
+TeX.writers.contact,'\\n',
+TeX_hw_writer_info
+cat( TeX_hw_writer_info )
+cat(TeX_hw_writer_info)
+gsub("R.WritersLong",TeX.Writers.long,"\\newcommand{\\WritersLong}{R.WritersLong}")
+%HomeworkInfo
+TeX_hw_writer_info,'\n'
+TeX_hw_title = function(course = ''){
+write_table
+if(course.title == ''){
+TeX.course.title = gsub('R.CourseTitle',course.title,'\\newcommand{\\CourseLong}{R.CourseShort: R.CourseTitle')
+instructor.short = ''
+instructor.long = instructor[1]
+if(instructor.long == ''){
+if(instructor.short == ''){
+TeX_hw_title(
+semester = 'SPRING 2014',
+if(length(instructor) > 1){
+instructor.long = paste(instructor,sep=' ')
+instruct = Dr. Dan Nordman
+TeX.instructor.short == gsub('R.InstructorShort',instructor.short,'\\newcommand{\\InstructorShort}{R.InstructorShort}')
+unlist(strsplit(instructor,'\\s+'))
+instructor = Dr. Dan Nordman
+instructor = 'Dr. Dan Nordman'
+instructor
+instructor[length(instructor)]
+paste(instructor,collapse=' ')
+gsub('R.InstructorLong',instructor.long,'\\newcommand{\\InstructorLong}{R.InstructorLong}')
+TeX.instructor.long == gsub('R.InstructorLong',instructor.long,'\\newcommand{\\InstructorLong}{R.InstructorLong}')
+if(course.long == ''){
+if(course.short == ''){
+TeX.course.title = gsub('R.course.short',course.short,TeX.course.title)
+getwd()
+if(course = ''){
+TeX.course.long = gsub('R.CourseLong',course.long,'\\newcommand{\\CourseLong}{R.course.long}')
+TeX.course.title = gsub('R.CourseTitle',course,'\\newcommand{\\CourseLong}{R.CourseShort: R.CourseTitle')
+course.short = ''
+course.long = course[1]
+course = 'M165',
+TeX_hw_title = function(semester = '', course = '', instructor = '', writers = '', contact = '', title = '', due = '', assignment = '', location = ''){
+if(semester == ''){
+TeX.Semester = ''
+TeX.Semester = gsub('R.Semester',semester,'\\newcommand{\\Semester}{R.Semester}')
+if(course == ''){
+TeX.course.short = ''
+TeX.course.long = ''
+TeX.course.title = ''
+course = unlist(strsplit(course,':\\s+'))
+if(length(course) > 1){
+course.long = course[2]
+course.short = course[1]
+course.long = ''
+TeX.course.short = gsub('R.course.short',course.short,'\\newcommand{\\CourseShort}{R.course.short}')
+TeX.course.long = gsub('R.course.long',course.long,'\\newcommand{\\CourseLong}{R.course.long}')
+TeX.course.title = gsub('R.CourseLong',course.long,'\\newcommand{\\CourseLong}{R.CourseShort: R.CourseLong')
+TeX.course.title = gsub('R.CourseShort',course.short,TeX.course.title)
+TeX_hw_course_info = paste("%Course Information",'\n',
+TeX.Semester,'\n',
+TeX.course.short,'\n',
+TeX.course.long,'\n',
+TeX.course.title,
+if(instructor == ''){
+TeX.instructor.long == ''
+TeX.instructor.short == ''
+instructor = unlist(strsplit(instructor,'\\s+'))
+instructor.short = instructor[length(instructor)]
+instructor.long = paste(instructor,collapse=' ')
+TeX.instructor.long = gsub('R.InstructorLong',instructor.long,'\\newcommand{\\InstructorLong}{R.InstructorLong}')
+TeX.instructor.short = gsub('R.InstructorShort',instructor.short,'\\newcommand{\\InstructorShort}{R.InstructorShort}')
+TeX_hw_instructor_info = paste("%Instructor Information",'\n',
+TeX.instructor.short,'\n',
+TeX.instructor.long,'\n',
+if(writers == ''){
+TeX.writers.long = ''
+TeX.Writers.short = ''
+writers.long = gsub('\\s+',' ',writers)
+writers = unlist(strsplit(writers,',\\s+'))
+for(i in 2:length(writers)){
+if(grepl('\\.',writers[i])){
+writers[i-1] = paste(writers[i-1],writers[i],sep=', ')
+writers = writers[!grepl('\\.',writers) | grepl(',',writers)]
+writers.short = paste(sapply(1:length(writers),function(x) paste(unlist(strsplit(writers[x],'\\s+'))[2:length(unlist(strsplit(writers[x],'\\s+')))],collapse = ' ')),collapse = ', ')
+TeX.writers.long = gsub("R.WritersLong",writers.long,"\\newcommand{\\WritersLong}{R.WritersLong}")
+TeX.writers.short = gsub("R.WritersShort",writers.short,"\\newcommand{\\WritersShort}{R.WritersShort}")
+if(contact == ''){
+TeX.writers.contact = ''
+contact = gsub(',\\s+','}, \\\\\\\\textcolor{blue}{',contact)
+contact = paste('\\\\textcolor{blue}{',contact,'}',sep='',collapse = ',')
+TeX.writers.contact = gsub('R.WritersContact',contact,'\\newcommand{\\WritersContact}{R.WritersContact}')
+TeX_hw_writer_info = paste("%Writer Information",'\n',
+TeX.writers.short,'\n',
+TeX.writers.long,'\n',
+TeX.writers.contact,'\n',
+if(title == ''){
+TeX.title = ''
+TeX.title = gsub('R.homeworkTitle',title,'\\newcommand{\\homeworkTitle}{R.homeworkTitle}')
+if(due == ''){
+TeX.DueDate = ''
+TeX.DueDate = gsub('R.DueDate',due,'\\newcommand{\\homeworkDueDate}{R.DueDate}')
+if(assignment == ''){
+TeX.assignment = ''
+TeX.assignment= gsub('R.assignment',assignment,'\\newcommand{\\homeworkAssignment}{R.assignment}')
+if(location == ''){
+TeX.DataLoc = ''
+}else{
+TeX.DataLoc = gsub('R.DataLoc',location,'\\newcommand{\\homeworkDataLocation}{\\blue{R.DataLoc}}')
+TeX_hw_homework_info = paste("%Homework Information",'\n',
+TeX.title,'\n',
+TeX.DueDate,'\n',
+TeX.assignment,'\n',
+TeX.DataLoc,'\n',
+sep='')
+TeX_HW_info_doc = paste(TeX_hw_course_info,'\n',
+TeX_hw_instructor_info,'\n',
+TeX_hw_writer_info,'\n',
+TeX_hw_homework_info)
+fileConn = file('information_format_document.tex')
+writeLines(TeX_HW_info_doc, fileConn)
+close(fileConn)
+}
+TeX_hw_title(semester = 'SPRING 2014',
+course = 'M165: Calc',
+instructor = 'Dr. Dan Nordman',
+writers = 'Ian Mozun',
+contact = 'imouzon@iastate.edu',
+title = 'Hommero 3',
+due = 'Feb 1 2014',
+assignment = '1.4, 1.5',
+location = '')
+base::source("/tmp/r-plugin-user/Rsource-59631-TeX_hw_title.R")
