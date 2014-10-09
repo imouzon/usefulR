@@ -19,7 +19,7 @@ knitrSetup = function(rootDir = FALSE, use.tikz = FALSE){
    if(fig.use.time){
       fig.prefix = paste0('figure_',format(Sys.time(),'%m-%d','_'))
    }else{
-      fig.prefix = 'figure_'
+      fig.prefix = 'fig'
    }
    fig.path = paste0(fig.folder,fig.prefix,'_')
 
@@ -28,7 +28,7 @@ knitrSetup = function(rootDir = FALSE, use.tikz = FALSE){
    if(cache.use.time){
       cache.prefix = paste0('out_',format(Sys.time(),'%m-%d'))
    }else{
-      cache.prefix = 'out_'
+      cache.prefix = 'out'
    }
    cache.path = paste0(cache.folder,cache.prefix,'_')
 
