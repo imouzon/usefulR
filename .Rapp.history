@@ -1,162 +1,32 @@
-unlist(strsplit('course: dogs and cats',':'))
-unlist(strsplit('course: dogs and cats',':\s'))
-unlist(strsplit('course: dogs and cats',':\\s\\+'))
-unlist(strsplit('course: dogs and cats',':\\s'))
-unlist(strsplit('course:  dogs and cats',':\\s'))
-unlist(strsplit('course:  dogs and cats',':\\s\\.'))
-unlist(strsplit('course:  dogs and cats',':\\s\\*'))
-unlist(strsplit('course:  dogs and cats',':\\s\\+'))
-unlist(strsplit('course:  dogs and cats',':\\s+'))
-unlist(strsplit('course: dogs and cats',':\\s+'))
-unlist(strsplit('course:dogs and cats',':\\s+'))
-unlist(strsplit('dogs mcgee, ian mouzon',',\\s+'))
-TeX.WritersContact = unlist(strsplit('dogs mcgee, ian mouzon',',\\s+'))
-TeX.WritersContact
-TeX.Writers.short = sapply(1:length(TeX.Writers.short),function(x) unlist(strsplit(TeX.Writers,'\\s+'))[length(unlist(strsplit(TeX.Writers,'\\s+')))])
-TeX.Writers.short = sapply(1:length(TeX.Writers),function(x) unlist(strsplit(TeX.Writers,'\\s+'))[length(unlist(strsplit(TeX.Writers,'\\s+')))])
-TeX.Writers.short = sapply(1:length(TeX.Writers),function(x) unlist(strsplit(TeX.Writers[x],'\\s+'))[length(unlist(strsplit(TeX.Writers[x],'\\s+')))])
-TeX.Writers.short = sapply(1:length(TeX.Writers),function(x) paste(unlist(strsplit(TeX.Writers[x],'\\s+'))[2:length(unlist(strsplit(TeX.Writers[x],'\\s+')))]),' ')
-TeX.Writers = unlist(strsplit('dogs mcgee, ian mouzon',',\\s+'))
-for(i in 1:length(TeX.Writers)){
-TeX.Writers.short = sapply(1:length(TeX.Writers),function(x) paste(unlist(strsplit(TeX.Writers[x],'\\s+'))[2:length(unlist(strsplit(TeX.Writers[x],'\\s+')))]))
-TeX.Writers = unlist(strsplit('dogs mcgee, jr.; ian mouzon',';\\s+'))
-strsplit(TeX.Writers[x],'\\s+'))
-x = 1
-unlist(
-strsplit(TeX.Writers[x],'\\s+')
-)
-unlist(strsplit(TeX.Writers[x],'\\s+'))
-unlist(strsplit(TeX.Writers[x],'\\s+'))[2:length(unlist(strsplit(TeX.Writers[x],'\\s+')))])
-unlist(strsplit(TeX.Writers[x],'\\s+'))[2:length(unlist(strsplit(TeX.Writers[x],'\\s+')))]
-paste(unlist(strsplit(TeX.Writers[x],'\\s+'))[2:length(unlist(strsplit(TeX.Writers[x],'\\s+')))])
-paste(unlist(strsplit(TeX.Writers[x],'\\s+'))[2:length(unlist(strsplit(TeX.Writers[x],'\\s+')))],collapse = ' ')
-TeX.Writers 'dogs mcgee, jr., ian mouzon'
-TeX.Writers = gsub(';\\s+\',';',TeX.Writers)
-TeX.Writers =
-TeX.Writers = gsub(',',';',TeX.Writers)
-gsub(';\\s+\\l+.;',',',TeX.Writers)
-grep(';\\s+',TeX.Writers)
-grepl(';\\s+',TeX.Writers)
-grepl(';\\s+\\l+',TeX.Writers)
-grepl(';\\l+',TeX.Writers)
-grepl('\\l+',TeX.Writers)
-grepl('\\u+',TeX.Writers)
-grepl('\\U+',TeX.Writers)
-grepl('\\u+','dogs')
-grepl('\\l+','dogs')
-grepl('\\l','dogs')
-grepl('\\U','dogs')
-grepl('\\u','dogs')
-grepl('\\u+','Dogs')
-grepl('\\u','Dogs')
-grepl(';','Dogs; jr.; cats mcgill')
-grepl(';(*)\\.;','Dogs; jr.; cats mcgill')
-grepl(';\\(*\\)\\.;','Dogs; jr.; cats mcgill')
-grepl(';\(*\)\\.;','Dogs; jr.; cats mcgill')
-grepl(';\\(\\*\\)\\.;','Dogs; jr.; cats mcgill')
-grepl(';\\(*.)\\.;','Dogs; jr.; cats mcgill')
-grepl(';\\(*.\\)\\.;','Dogs; jr.; cats mcgill')
-grepl(';(*.)\\.;','Dogs; jr.; cats mcgill')
-grepl(';(*.).;','Dogs; jr.; cats mcgill')
-grepl(';(*.);','Dogs; jr.; cats mcgill')
-grepl(';(*.)','Dogs; jr.; cats mcgill')
-gsub(';(*.)','cows','Dogs; jr.; cats mcgill')
-grepl('.',TeX.Writers)
-if(grep('\\.',TeX.Writers[i])) TeX.Writers[i-1] = paste(TeX.Writers[i-1],TeX.Writers[i],sep=', ')
-grep('\\.',TeX.Writers[i])
-i = 2
-if(grep('\\.',TeX.Writers[i])){
-i = 3
-grepl(',',TeX.Writers)
-!grepl('\\.',TeX.Writers) & grepl(',',TeX.Writers)
-grepl('\\.',TeX.Writers) & grepl(',',TeX.Writers)
-grepl('\\.',TeX.Writers)
-!grepl('\\.',TeX.Writers) || grepl(',',TeX.Writers)
-!grepl('\\.',TeX.Writers)
-!grepl('\\.',TeX.Writers) | grepl(',',TeX.Writers)
-TeX.Writers[!grepl('\\.',TeX.Writers) | grepl(',',TeX.Writers)]
-sapply(1:length(TeX.Writers),function(x) paste(unlist(strsplit(TeX.Writers[x],'\\s+'))[2:length(unlist(strsplit(TeX.Writers[x],'\\s+')))],collapse = ' '))
-paste('\\blue{',TeX.Writers,'}',sep='',collapse = ',')
-TeX.Writers = unlist(strsplit('dogs mcgee, jr., ian mouzon',',\\s+'))
-TeX.Writers = 'dogs mcgee, jr., ian mouzon'
-Tex.Writers = 'dogs mcggee, jr., cats fish-birds, ian mouzon'
-TeX.Writers
-TeX.Writers.short = sapply(1:length(TeX.Writers),function(x) paste(unlist(strsplit(TeX.Writers[x],'\\s+'))[2:length(unlist(strsplit(TeX.Writers[x],'\\s+')))],collapse = ' '))
-TeX.Writers.short
-TeX.Writers.contact = gsub(',','}, \\blue{',contact,sep='')
-TeX.Writers.contact = gsub(',','}, \\blue{',contact)
-TeX.Writers.contact = gsub(',','}, \\\\blue{',contact)
-TeX.Writers.contact = gsub(',','}, \\\\textcolor{blue}{',contact)
-TeX.Writers.contact = gsub(', ','}, \\\\textcolor{blue}{',contact)
-TeX.Writers.long = paste('\\textcolor{blue}{',TeX.Writers.contact,'}',sep='',collapse = ',')
-TeX.Writers.long = paste('\\textcolor{blue}{',TeX.Writers,'}',sep='',collapse = ',')
-TeX.Writers = unlist(strsplit(writers,',\\s+'))
-for(i in 2:length(TeX.Writers)){
-if(grepl('\\.',TeX.Writers[i])){
-TeX.Writers[i-1] = paste(TeX.Writers[i-1],TeX.Writers[i],sep=', ')
-TeX.Writers = TeX.Writers[!grepl('\\.',TeX.Writers) | grepl(',',TeX.Writers)]
-TeX.Writers.short = paste(sapply(1:length(TeX.Writers),function(x) paste(unlist(strsplit(TeX.Writers[x],'\\s+'))[2:length(unlist(strsplit(TeX.Writers[x],'\\s+')))],collapse = ' ')),collapse = ', ')
-TeX.Writers.long = paste(TeX.Writers,collapse = ', ')
-TeX.Writers.contact = gsub(',\\s+','}, \\\\textcolor{blue}{',contact)
-TeX.Writers.contact = paste('\\textcolor{blue}{',TeX.Writers.contact,'}',sep='',collapse = ',')
-TeX.Writers.long
-writers.long = ''
-writers.short = ''
-writers
-writers.long
-writers.short
-TeX.Writers.long = gsub("R.WritersLong",writers.long,"\\newcommand{\\WritersLong}{R.WritersLong}")
-if(contact != ''){
-contact
-contact = paste('\\textcolor{blue}{',contact,'}',sep='',collapse = ',')
-contact = gsub(',\\s+','}, \\\\textcolor{blue}{',contact)
-TeX.Writers.contact = gsub('R.WritersContact',contact,'\\newcommand{\\WritersContact}{R.WritersContact}')
-TeX.Writers.contact
-TeX.Writers.short = gsub("R.WritersShort",writers.short,"\\newcommand{\\WritersShort}{R.WritersShort}")
-writers = 'dogs mcggee, jr., cats fish-birds, ian mouzon'
-contact = 'imouzon@gjgj.com, fkdljf@kdd.com'
-TeX_hw_writer_info = paste("%Writer Information",'\\n',
-TeX.writers.short,'\\n',
-TeX.writers.long,'\\n',
-TeX.writers.contact,'\\n',
-TeX_hw_writer_info
-cat( TeX_hw_writer_info )
-cat(TeX_hw_writer_info)
-gsub("R.WritersLong",TeX.Writers.long,"\\newcommand{\\WritersLong}{R.WritersLong}")
-%HomeworkInfo
-TeX_hw_writer_info,'\n'
-TeX_hw_title = function(course = ''){
-write_table
-if(course.title == ''){
-TeX.course.title = gsub('R.CourseTitle',course.title,'\\newcommand{\\CourseLong}{R.CourseShort: R.CourseTitle')
-instructor.short = ''
-instructor.long = instructor[1]
-if(instructor.long == ''){
-if(instructor.short == ''){
-TeX_hw_title(
-semester = 'SPRING 2014',
-if(length(instructor) > 1){
-instructor.long = paste(instructor,sep=' ')
-instruct = Dr. Dan Nordman
-TeX.instructor.short == gsub('R.InstructorShort',instructor.short,'\\newcommand{\\InstructorShort}{R.InstructorShort}')
-unlist(strsplit(instructor,'\\s+'))
-instructor = Dr. Dan Nordman
-instructor = 'Dr. Dan Nordman'
-instructor
-instructor[length(instructor)]
-paste(instructor,collapse=' ')
-gsub('R.InstructorLong',instructor.long,'\\newcommand{\\InstructorLong}{R.InstructorLong}')
-TeX.instructor.long == gsub('R.InstructorLong',instructor.long,'\\newcommand{\\InstructorLong}{R.InstructorLong}')
-if(course.long == ''){
-if(course.short == ''){
-TeX.course.title = gsub('R.course.short',course.short,TeX.course.title)
-getwd()
-if(course = ''){
-TeX.course.long = gsub('R.CourseLong',course.long,'\\newcommand{\\CourseLong}{R.course.long}')
-TeX.course.title = gsub('R.CourseTitle',course,'\\newcommand{\\CourseLong}{R.CourseShort: R.CourseTitle')
-course.short = ''
-course.long = course[1]
-course = 'M165',
+lapply(1:10, function(x) lyapunov(get.sure.file('Dog',1,'interictal',x)))
+lapply(1:10, function(x) lyapunov(get.seizure.file('Dog',1,'interictal',x)))
+lyapulist = ls()
+lya.out = c(lya.out, lyapunov(d.mat1[j,])
+lya.out = c()
+ch.out = c()
+file.out = c()
+for(i in 1:10){
+dmat = get.seizure.file('Dog',1,'test',i)[[1]][[1]]
+for(j in 1:16){
+lya.out = c(lya.out, lyapunov(d.mat1[j,]))
+ch.out = c(ch.out,j)
+file.out = c(file.out,i)
+lya.out
+d.mat1 = readMat(dog1.files[6])[[1]][[1]]
+head(d.mat1)
+dog1.files = get.seizure.filenames('Dog',3)
+x =2
+x
+base::source("/tmp/r-plugin-user/Rsource-1358-TeX_hw_title.R")
+TeX_hw_title(semester = 'SPRING 2014',
+course = 'M165: Calc',
+instructor = 'Dr. Dan Nordman',
+writers = 'Ian Mozun',
+contact = 'imouzon@iastate.edu',
+title = 'Hommero 3',
+due = 'Feb 1 2014',
+assignment = '1.4, 1.5',
+location = '')
 TeX_hw_title = function(semester = '', course = '', instructor = '', writers = '', contact = '', title = '', due = '', assignment = '', location = ''){
 if(semester == ''){
 TeX.Semester = ''
@@ -172,7 +42,7 @@ course.short = course[1]
 course.long = ''
 TeX.course.short = gsub('R.course.short',course.short,'\\newcommand{\\CourseShort}{R.course.short}')
 TeX.course.long = gsub('R.course.long',course.long,'\\newcommand{\\CourseLong}{R.course.long}')
-TeX.course.title = gsub('R.CourseLong',course.long,'\\newcommand{\\CourseLong}{R.CourseShort: R.CourseLong')
+TeX.course.title = gsub('R.CourseLong',course.long,'\\newcommand{\\CourseLong}{R.CourseShort: R.CourseLong}')
 TeX.course.title = gsub('R.CourseShort',course.short,TeX.course.title)
 TeX_hw_course_info = paste("%Course Information",'\n',
 TeX.Semester,'\n',
@@ -235,16 +105,146 @@ TeX_hw_instructor_info,'\n',
 TeX_hw_writer_info,'\n',
 TeX_hw_homework_info)
 fileConn = file('information_format_document.tex')
+TeX_title = '
+\\begin{tabular}{c}
+\\LARGE{\\CourseLong} \\\\
+\\Large{\\InstructorLong} \\\\
+\\homeworkTitle \\\\
+\\Semester, \\homeworkDueDate\\\\
+\\end{tabular}
+\\end{center}
+\\begin{center}
+\\renewcommand{\\arraystretch}{1.5}
+\\begin{tabular*}{0.65\\textwidth}{r@{:\\hspace{.3cm}}l}
+Student Name& \\WritersLong \\\\
+email& \\WritersContact \\\\
+Due Date& \\homeworkDueDate\\\\
+Data Location& \\homeworkDataLocation \\\\
+\\hline
+\\end{tabular*}
+\\end{center}"
+return(title.text)'
+fileConn = file('title_format_document.tex')
 writeLines(TeX_HW_info_doc, fileConn)
 close(fileConn)
+500*100
+dog1.w = reshape(dog1,idvar = 1:4,timevar = 'channel',direction='wide')
+quit(save = "no")
+library(tikzDevice)
+require(tikzDevice)
+options(tikzLatex = '/opt/local/bin/pdflatex')
+gsub(' ','"quietly=TRUE); require("',basic.packages)
+gsub(' ','quietly=TRUE); require(',basic.packages)
+basic.packages = 'plyr reshape2 ggplot2'
+paste0('require(',gsub(' ','quietly=TRUE); require(',basic.packages),');')
+paste0('require(',gsub(' ',',quietly=TRUE); require(',basic.packages),');')
+?earth
+??earth
+?Rweka
+??Rweka
+require('plyr',quietly=TRUE)
+require('reshape2',quietly=TRUE)
+require("ggplot2", quietly = TRUE)
+theme_set(theme_bw())
+data.mining = 'rpart earth fields nnet neuralnet randomForest party R.matlab RWeka'
+cat(paste('The following packages were loaded:',basic.packages,data.mining,graphics))
+message('dogs')
+setwd('~/R/packages/usefulR/')
+document()
+install()
+require('devtools')
+install_github('usefulR','imouzon')
+library(usefulR)
+knitrSetup()
+makeParent_document(parentDir = NULL, docName = 'main_document'){
+return(paste0(parentDir,docName))
+makeParent_document = function(parentDir = NULL, docName = 'main_document'){
+makeParent_document = function(parentDir = NULL, docName = 'main_document.Rnw'){
+strsplit('dogs.rnw','.')
+strsplit('dogs.rnw','\.')
+strsplit('dogs.rnw','\\.')
+makeParent = function(parentDir = NULL, parentDoc = 'main_document'){
+docName = paste0(strsplit(parentDoc,'\\.'),'.rnw')
+parentDir = NULL
+parentDir
+docName = paste0(strsplit(docName,'\\.'),'.rnw')
+paste0(strsplit(docName,'\\.'),'.rnw')
+docName = 'main_document'
+strsplit(docName,'\\.')
+strsplit(docName,'\\.')[[1]][1]
+gsub(c('.rnw','.Rnw'),'','dogs.rnw')
+strsplit(docName,'\\.rnw')[[1]][1]
+docName = 'main_document.new'
+if(grepl('.rnw',docName))
+grepl('.rnw',docName)
+strsplit(docName,'\\.')[[1]][1:(strsplit(docName,'\\.')[[1]] - 1)]
+strsplit(docName,'\\.')[[1]]
+[1:(strsplit(docName,'\\.')[[1]] - 1)]
+[1:(length(strsplit(docName,'\\.')[[1]]) - 1)]
+1:(length(strsplit(docName,'\\.')[[1]]) - 1)
+strsplit(docName,'\\.')[[1]][1:(length(strsplit(docName,'\\.')[[1]]) - 1)]
+paste(strsplit(docName,'\\.')[[1]][1:(length(strsplit(docName,'\\.')[[1]]) - 1)],'.')
+paste(strsplit(docName,'\\.')[[1]][1:(length(strsplit(docName,'\\.')[[1]]) - 1)],collapse='.')
+docName = paste0(paste(strsplit(docName,'\\.')[[1]][1:(length(strsplit(docName,'\\.')[[1]]) - 1)],collapse='.'),'.rnw')
+docName = 'main_document.new.rnw'
+paste0(paste(strsplit(docName,'\\.')[[1]][1:(length(strsplit(docName,'\\.')[[1]]) - 1)],collapse='.'),'.rnw')
+if(grepl('.rnw',docName)){
+docName
+base::source("/tmp/r-plugin-user/Rsource-290-makeParent_document.r")
+rm(list = ls())
+docName = 'main_document.new.Rnw'
+cat(docName)
+makeParent_document()
+return(docName)
+makeParent()
+if(is.null(parentDir)) parentDir = getwd()
+if(grepl('.rnw',tolower(docName))){
+docName = paste(strsplit(docName,'\\.')[[1]][1:(length(strsplit(docName,'\\.')[[1]]) - 1)],collapse='.')
+docName = paste0(docName,'.rnw')
+return(paste(parentDir,docName,sep='/'))
+base::source("/tmp/r-plugin-user/Rsource-290-makeParent_location.r")
+makeParent = function(parentDir = NULL, docName = 'main_document'){
+makeParent_location()
+makeParent_location()$filename
+parent.location = makeParent_location()
+TeX_packages()
+base::source("/tmp/r-plugin-user/Rsource-290-TeX_packages.r")
+TeXPackages <- function(useAllpackages=TRUE){
+TeXPackages.char =
+\\usepackage[T1]{fontenc}
+\\usepackage{lmodern}
+\\usepackage{url}
+\\usepackage{pdfcolmk}
+\\usepackage{multirow}
+\\usepackage{pifont}
+\\usepackage{amsmath,amsfonts,amsthm,amssymb}
+\\usepackage{Tabbing}
+\\usepackage{etoolbox}
+\\usepackage{fancyhdr}
+\\usepackage{lastpage}
+\\usepackage{listings}
+\\usepackage{lstlinebgrd}
+\\usepackage{extramarks}
+\\usepackage{enumerate}
+\\usepackage{chngpage}
+\\usepackage{soul,color}
+\\usepackage{graphicx,float,wrapfig}
+\\usepackage{amsmath,amssymb, rotating}
+\\usepackage{color}
+\\usepackage{hyperref}
+\\usepackage{animate}
+\\usepackage{array}
+\\usepackage{graphics, color}
+\\usepackage{graphicx}
+\\usepackage{epsfig}
+%\\usepackage{minted}
+\\usepackage{setspace}
+\\usepackage{verbatim}
+\\usepackage[margin=1.0in]{geometry}
+\\usepackage{tikz}
+\\usepackage{mdframed}
+\\usepackage{clrscode3e}
+\\usetikzlibrary{backgrounds}
+'
+return(TeXPackages.char)
 }
-TeX_hw_title(semester = 'SPRING 2014',
-course = 'M165: Calc',
-instructor = 'Dr. Dan Nordman',
-writers = 'Ian Mozun',
-contact = 'imouzon@iastate.edu',
-title = 'Hommero 3',
-due = 'Feb 1 2014',
-assignment = '1.4, 1.5',
-location = '')
-base::source("/tmp/r-plugin-user/Rsource-59631-TeX_hw_title.R")

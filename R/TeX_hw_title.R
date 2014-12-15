@@ -4,8 +4,29 @@
 #' @param course character value, optional argument
 #' @export
 #' @examples
-#' knitrSetup(use.tikz = FALSE)
-TeX_hw_title = function(semester = '', course = '', instructor = '', writers = '', contact = '', title = '', due = '', assignment = '', location = ''){
+#' TeX_title(use.tikz = FALSE)
+TeX_title = function(semester = '', course = '', instructor = '', writers = '', contact = '', title = '', due = '', assignment = '', location = ''){
+   options = 
+   TeX_title has the following options which can be customized
+   course.num = "COM S 511"
+   course.title = "Design and Analysis of Algorithms"
+   assignment.name = "Homework Assignment"
+   assignment.num = "3"
+   semester = "Fall 2014"
+   instructor = "Dr. Oliver Eulenstein"
+   instructor.short = "Eulenstein"
+   writer = "Ian Mouzon"
+   writer.short = "Mouzon"
+   writer.contact = "imouzon@iastate.edu"
+   assignment = "Assigned problems on blackboard"
+   due.date = "Tuesday, September 23rd at 5:00"
+
+
+   
+   
+    
+
+
    #semester course instructor writers contact title due assignment location
    if(semester == ''){
       TeX.Semester = ''
