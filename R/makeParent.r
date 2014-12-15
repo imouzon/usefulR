@@ -7,16 +7,29 @@
 #' @examples
 #' makeParent(parentDir = '~/courses/cs511/code_bank')
 
-makeParent = function(parentDir = NULL, docName = 'main_document'){
+makeParent = function(parentDir = NULL, docName = 'main_document',overwrite = FALSE){
+   #returns filename, filelocation, fullpath as a list
    parent.location = makeParent_location(parentDir = parentDir, docName = docName)
 
-   if(is.null(parentDir)) parentDir = getwd()
+   #create empty parent file
+   if(file.exists(parent.location$fullpath) & !overwrite) stop(paste('The file',parent.location$fullpath),'already exists')
+   file.create(parent.location$fullpath)
 
-   if(grepl('.rnw',tolower(docName))){
-      docName = paste(strsplit(docName,'\\.')[[1]][1:(length(strsplit(docName,'\\.')[[1]]) - 1)],collapse='.')
-   }
-   docName = paste0(docName,'.rnw')
-   return(paste(parentDir,docName,sep='/'))
+   #get header information 
+   header = makeParent_header(gsub('.rnw','',parent.location[[1]]),'imouzon')
+   
+   #add header to file
+   write(header,file=parent.location$fullpath,append=TRUE)
+
+   #add packages to file
+   package.list = makeParent_addPackages()
+   write(package.list,file=parent.location$fullpath,append=TRUE)
+   
 }
+makeParent(overwrite=TRUE)
+parent.location = makeParent_location()
+parent.location[[3]]
 
+library(knitr)
 
+sys.calls()

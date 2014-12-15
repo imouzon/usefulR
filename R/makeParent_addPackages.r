@@ -6,9 +6,17 @@
 #' @examples
 #' makeParent_addPackages(all_packages = TRUE)
 
-makeParent_addPackages = function(){
+makeParent_addPackages = function(all_packages=TRUE){
 package.list = 
-'\\usepackage[T1]{fontenc}
+'
+\\PassOptionsToPackage{usenames,dvipsnames,svgnames,table}{xcolor}
+\\documentclass[10pt]{report}
+
+%\\tracingall % used to pin point problems in latexing a doc
+
+%%%%%%%% Packages  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\\PassOption
+\\usepackage[T1]{fontenc}
 \\usepackage{lmodern}
 \\usepackage{url}
 \\usepackage{pdfcolmk}
@@ -46,4 +54,6 @@ package.list =
 \\usepackage{mdframed}
 \\usepackage{clrscode3e}
 \\usetikzlibrary{backgrounds}'
+
+return(package.list)
 }

@@ -13,7 +13,8 @@ makeParent_location = function(parentDir = NULL, docName = 'main_document'){
    if(grepl('.rnw',tolower(docName))){
       docName = paste(strsplit(docName,'\\.')[[1]][1:(length(strsplit(docName,'\\.')[[1]]) - 1)],collapse='.')
    }
+
    docName = paste0(docName,'.rnw')
+
    return(list('filename' = docName, 'filelocation'=parentDir, 'fullpath'= paste(parentDir,docName,sep='/')))
 }
-
