@@ -1,59 +1,69 @@
 #' packages for LaTeX
 #'
 #' This code sets some of the values for knitr that I like.
-#' @param useAllpackges logical value, optional argument
+#' @param all_packges logical value, optional argument
 #' @export
 #' @examples
 #' makeParent_addPackages(all_packages = TRUE)
 
 makeParent_addPackages = function(all_packages=TRUE){
-package.list = 
-'
-\\PassOptionsToPackage{usenames,dvipsnames,svgnames,table}{xcolor}
-\\documentclass[10pt]{report}
+   PassOptionsToPackage=c('usenames,dvipsnames,svgnames,table','xcolor')
+   package.list = matrix(
+                  c('fontenc',
+                    'lmodern', 
+                    'url', 
+                    'pdfcolmk', 
+                    'multirow', 
+                    'graphicx', 
+                    'pifont', 
+                    'amsmath,amsfonts,amsthm,amssymb', 
+                    'setspace',
+                    'Tabbing',
+                    'etoolbox',
+                    'fancyhdr',
+                    'lastpage',
+                    'listings',
+                    'lstlinebgrd',
+                    'extramarks',
+                    'enumerate',
+                    'chngpage',
+                    'soul,color',
+                    'graphicx,float,wrapfig',
+                    'amsmath,amssymb, rotating',
+                    'epsfig',
+                    'color',
+                    'hyperref',
+                    'animate',
+                    'array',
+                    'graphics, color',
+                    'graphicx',
+                    'epsfig',
+                    'setspace',
+                    'verbatim',
+                    'geometry',
+                    'tikz',
+                    'mdframed',
+                    'clrscode3e',
+                    'formalHW',
+                    'formatHW',
+                    'fancyquote',
+                    'mymathmacros'),byrow=TRUE,ncol=1)
 
-%\\tracingall % used to pin point problems in latexing a doc
+   package.opts =  matrix(c('margin=1.0in','geometry',
+                            'T1',          'fontenc'),
+                          nrow=2,byrow=TRUE)
 
-%%%%%%%% Packages  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\\PassOption
-\\usepackage[T1]{fontenc}
-\\usepackage{lmodern}
-\\usepackage{url}
-\\usepackage{pdfcolmk}
-\\usepackage{multirow}
-\\usepackage{graphicx}
-\\usepackage{tikz}
-\\usepackage{pifont}
-\\usepackage{amsmath,amsfonts,amsthm,amssymb}
-\\usepackage{setspace}
-\\usepackage{Tabbing}
-\\usepackage{etoolbox}
-\\usepackage{fancyhdr}
-\\usepackage{lastpage}
-\\usepackage{listings}
-\\usepackage{lstlinebgrd}
-\\usepackage{extramarks}
-\\usepackage{enumerate}
-\\usepackage{chngpage}
-\\usepackage{soul,color}
-\\usepackage{graphicx,float,wrapfig}
-\\usepackage{amsmath,amssymb, rotating}
-\\usepackage{epsfig}
-\\usepackage{color}
-\\usepackage{hyperref}
-\\usepackage{animate}
-\\usepackage{array}
-\\usepackage{graphics, color}
-\\usepackage{graphicx}
-\\usepackage{epsfig}
-%\\usepackage{minted}
-\\usepackage{setspace}
-\\usepackage{verbatim}
-\\usepackage[margin=1.0in]{geometry}
-\\usepackage{tikz}
-\\usepackage{mdframed}
-\\usepackage{clrscode3e}
-\\usetikzlibrary{backgrounds}'
+   package.call = paste0('\\usepackage{',package.list,'}')
 
-return(package.list)
+
+   for(i in 1:nrow(package.opts)){
+      package.call[grepl(package.opts[i,2], package.list)] = gsub('usepackage',paste0('usepackage[',package.opts[i,1],']'),package.call[grepl(package.opts[i,2], package.list)])
+   }
+      
+   POTP = paste0('\\PassOptionsToPackage{',PassOptionsToPackage[1],'}{',PassOptionsToPackage[2],'}')
+
+   ret = paste(POTP,'\\documentclass[10pt]{report}',paste(package.call,collapse='\n'),collapse='\n')
+   ret = paste(ret,'\n\\begin{document}','\n\n','\n\\end{document}',sep='\n')
+
+   return(ret)
 }

@@ -1,0 +1,75 @@
+% For LaTeX-Box: root = main_document.tex 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  File Name: main_document
+%  Purpose: 
+%
+%  Creation Date: 2014-12-15
+%  Last Modified: 
+%  Created By: imouzon
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% HOW TO USE THIS FILE:
+%
+% 1. Create a new .rnw file (this new file is referred to as a 'child document')
+% 2. Reference this file using one of the following in the child document:
+%
+%   a. by using \sexpr{}:
+%
+%        \sexpr{set_parent('main-document.rnw')}
+%
+%   b. by using a chunk:
+%
+%        <<set-parent,echo=FALSE,cache=FALSE>>=
+%        set_parent('main-document.rnw')
+%        @
+%
+% 3. knit the document in the usual way - the preamble here is included
+%
+
+
+\PassOptionsToPackage{usenames,dvipsnames,svgnames,table}{xcolor} \documentclass[10pt]{report} \usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{url}
+\usepackage{pdfcolmk}
+\usepackage{multirow}
+\usepackage{graphicx}
+\usepackage{pifont}
+\usepackage{amsmath,amsfonts,amsthm,amssymb}
+\usepackage{setspace}
+\usepackage{Tabbing}
+\usepackage{etoolbox}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{listings}
+\usepackage{lstlinebgrd}
+\usepackage{extramarks}
+\usepackage{enumerate}
+\usepackage{chngpage}
+\usepackage{soul,color}
+\usepackage{graphicx,float,wrapfig}
+\usepackage{amsmath,amssymb, rotating}
+\usepackage{epsfig}
+\usepackage{color}
+\usepackage{hyperref}
+\usepackage{animate}
+\usepackage{array}
+\usepackage{graphics, color}
+\usepackage{graphicx}
+\usepackage{epsfig}
+\usepackage{setspace}
+\usepackage{verbatim}
+\usepackage[margin=1.0in]{geometry}
+\usepackage{tikz}
+\usepackage{mdframed}
+\usepackage{clrscode3e}
+\usepackage{formalHW}
+\usepackage{formatHW}
+\usepackage{fancyquote}
+\usepackage{mymathmacros}
+
+\begin{document}
+
+
+
+
+\end{document}

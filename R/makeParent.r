@@ -24,12 +24,9 @@ makeParent = function(parentDir = NULL, docName = 'main_document',overwrite = FA
    #add packages to file
    package.list = makeParent_addPackages()
    write(package.list,file=parent.location$fullpath,append=TRUE)
-   
+
+   msg = paste('The parent directory has been created:',parent.location$fullpath)
+   message(msg)
+
+   return(parent.location$fullpath)
 }
-makeParent(overwrite=TRUE)
-parent.location = makeParent_location()
-parent.location[[3]]
-
-library(knitr)
-
-sys.calls()
