@@ -12,21 +12,24 @@ makeParent = function(parentDir = NULL, docName = 'main_document',overwrite = FA
    parent.location = makeParent_location(parentDir = parentDir, docName = docName)
 
    #create empty parent file
-   if(file.exists(parent.location$fullpath) & !overwrite) stop(paste('The file',parent.location$fullpath),'already exists')
-   file.create(parent.location$fullpath)
+   if(file.exists(parent.location$fullpath) & !overwrite){
+      message(paste('The file',parent.location$fullpath),'already exists')
+   }else{
+      file.create(parent.location$fullpath)
 
-   #get header information 
-   header = makeParent_header(gsub('.rnw','',parent.location[[1]]),'imouzon')
-   
-   #add header to file
-   write(header,file=parent.location$fullpath,append=TRUE)
+      #get header information 
+      header = makeParent_header(gsub('.rnw','',parent.location[[1]]),'imouzon')
+      
+      #add header to file
+      write(header,file=parent.location$fullpath,append=TRUE)
 
-   #add packages to file
-   package.list = makeParent_addPackages()
-   write(package.list,file=parent.location$fullpath,append=TRUE)
+      #add packages to file
+      package.list = makeParent_addPackages()
+      write(package.list,file=parent.location$fullpath,append=TRUE)
 
-   msg = paste('The parent directory has been created:',parent.location$fullpath)
-   message(msg)
+      msg = paste('The parent directory has been created:',parent.location$fullpath)
+      message(msg)
+   }
 
    return(parent.location$fullpath)
 }
