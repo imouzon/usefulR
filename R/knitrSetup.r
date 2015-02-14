@@ -11,25 +11,16 @@ knitrSetup = function(rootDir = FALSE, use.tikz = FALSE){
    if(rootDir == FALSE) rootDir <- getwd()
 
    #use date in figure names or cache files?
-   fig.use.time = FALSE
    cache.use.time = FALSE
 
-   #store figures in the fig folder, prefix with 'graphics-'
-   fig.folder = paste0(rootDir,'/figures/')
-   if(fig.use.time){
-      fig.prefix = paste0('figure_',format(Sys.time(),'%m-%d','_'))
-   }else{
-      fig.prefix = 'fig'
-   }
+   #store figures in the fig folder, prefix with 'graphics_'
+   fig.folder = paste0(rootDir,'/graphics/')
+   fig.prefix = 'graphics'
    fig.path = paste0(fig.folder,fig.prefix,'_')
 
    #cached output stored in cache.path
-   cache.folder = paste0(rootDir,'/out/cache/')
-   if(cache.use.time){
-      cache.prefix = paste0('out_',format(Sys.time(),'%m-%d'))
-   }else{
-      cache.prefix = 'out'
-   }
+   cache.folder = paste0(rootDir,'/cache/')
+   cache.prefix = 'out'
    cache.path = paste0(cache.folder,cache.prefix,'_')
 
    options(replace.assign=TRUE,width=50)
