@@ -49,6 +49,12 @@ knitrSetup = function(rootDir = FALSE, use.tikz = FALSE){
       knit_hooks$set(true.font=function(before,options,envir) if(before && !is.null(options$out.width)) dev.args = list(pointsize=10*as.numeric(strsplit(options$out.width,'\\\\')[[1]][1])))
    }
 
+   #fix the color errors
+   knit_hooks$set(document = function(x) {
+              sub('\\usepackage[]{color}', 
+                  '\\usepackage[]{xcolor}', x, fixed = TRUE)
+   })
+
    fig.msg = paste('By defualt figures will be stored in ',fig.path,'and have dimension',fig.w,'by',fig.h)
    cache.msg = paste('By default cache will be stored in',cache.path)
    message('knitr has the following options:\n',fig.msg,'\n',cache.msg,sep='   ')

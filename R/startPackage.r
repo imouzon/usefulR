@@ -144,4 +144,22 @@ pkg_create = function(pkg_name,use_github=TRUE){
    }
 }
 
-source('~/R/packages/usefulR/R/startPackage.r')
+swell = function(fn,pkg){
+   #
+   header = 
+   "#' function_name: \n#'\n#'  Purpose: .\n#' Creation Date:\n#' Last Modified: \n#'\n#' @param paramname character value, optional argument\n#' @param paramname integer value, optional argument\n#' @param docName character value, optional argument\n#' @export\n#' @examples\n#' \n\n"
+   charfun = as.character(substitute(fn))
+   function_name = unlist(strsplit(charfun,' '))
+   textcontent = gsub('function_name:',function_name,paste(header,charfun))
+   fileloc = paste0(opts_pkg$get('home'),pkg,'/R/',function_name,'.r')
+
+   if(file.exists(fileloc)) stop(paste('The function',function_name,'is already defined in the package',pkg))
+   write(textcontent,file = fileloc)
+
+   return(list(filename, textcontent))
+}
+
+
+
+   function(header)
+
