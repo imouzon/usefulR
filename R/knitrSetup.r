@@ -23,7 +23,7 @@ knitrSetup = function(rootDir = FALSE, use.tikz = FALSE){
    cache.prefix = 'out'
    cache.path = paste0(cache.folder,cache.prefix,'_')
 
-   options(replace.assign=TRUE,width=50)
+   options(formatR.arrow=TRUE,width=50)
 
    #figure options
    fig.w = 5
