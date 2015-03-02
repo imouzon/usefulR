@@ -37,7 +37,7 @@ knitrSetup = function(rootDir = FALSE, use.tikz = FALSE){
       fig.show='hold', 
       crop=TRUE,
       tidy=TRUE,
-      fig.pos = 'h',
+      fig.pos = 'H',
       par=TRUE
    )
 
