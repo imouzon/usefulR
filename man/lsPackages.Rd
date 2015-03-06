@@ -4,7 +4,8 @@
 \alias{lsPackages}
 \title{function_name: lsPackages}
 \usage{
-lsPackages(ret = FALSE, pr = TRUE, lib = FALSE)
+lsPackages(ret = FALSE, pr = TRUE, lib = FALSE,
+  ignore.packages = "base")
 }
 \arguments{
 \item{ret}{logical value, optional argument}
@@ -16,7 +17,7 @@ lsPackages(ret = FALSE, pr = TRUE, lib = FALSE)
 \description{
 Purpose: lists the packages loaded since the start of the R session
 Creation Date: 06-03-2015
-Last Modified: Fri Mar  6 15:05:17 2015
+Last Modified: Fri Mar  6 15:35:37 2015
 }
 \examples{
 lsPackages(FALSE,TRUE,TRUE)
