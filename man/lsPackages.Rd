@@ -5,7 +5,7 @@
 \title{function_name: lsPackages}
 \usage{
 lsPackages(ret = FALSE, pr = TRUE, lib = FALSE,
-  ignore.packages = "base")
+  ignore.packages = "base", kntr = FALSE)
 }
 \arguments{
 \item{ret}{logical value, optional argument}
@@ -13,11 +13,13 @@ lsPackages(ret = FALSE, pr = TRUE, lib = FALSE,
 \item{pr}{logical value, optional argument}
 
 \item{lib}{logical value, optional argument}
+
+\item{kntr}{logical value, optional argument}
 }
 \description{
 Purpose: lists the packages loaded since the start of the R session
 Creation Date: 06-03-2015
-Last Modified: Fri Mar  6 15:35:37 2015
+Last Modified: Fri Mar  6 16:06:36 2015
 }
 \examples{
 lsPackages(FALSE,TRUE,TRUE)
