@@ -2,7 +2,7 @@
 #'
 #' Purpose: lists the packages loaded since the start of the R session
 #' Creation Date: 06-03-2015
-#' Last Modified: Fri Mar  6 16:11:17 2015
+#' Last Modified: Fri Mar  6 16:11:47 2015
 #'
 #' @param ret logical value, optional argument
 #' @param pr logical value, optional argument
