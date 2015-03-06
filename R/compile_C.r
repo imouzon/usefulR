@@ -1,16 +1,9 @@
-#--------------------------------------**--------------------------------------#
-#  File Name:
-#  Purpose:
-#
-#  Creation Date: 13-02-2015
-#  Last Modified: Fri Feb 13 19:51:08 2015
-#  Created By:
-#
-#--------------------------------------**--------------------------------------#
-#
-#  FORTRAN and C: 
-#  source('~/R/shlib/C_FORTRAN.shlib.r')
-#  .Fortran("subroutine name",as.integer(input1),as.double(input2), etc)
+#' Compile C code 
+#'
+#' Compiles C code and run it, formatting results from system 
+#' @param filename character value, optional argument
+#' @param flags character value, optional argument
+#' @export
 
 verbatim.paste = function(txt) paste0('\n\\begin{verbatim}\n',txt,'\n\\end{verbatim}\n',collapse='')
 compile_C = function(filename,flags=''){
