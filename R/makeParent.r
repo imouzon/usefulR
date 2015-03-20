@@ -7,8 +7,9 @@
 #' @examples
 #' makeParent(parentDir = '~/courses/cs511/code_bank')
 
-makeParent = function(parentDir = NULL, docName = 'main_document',overwrite = FALSE){
+makeParent = function(parentDir = NULL, package.list = NULL, special.opts = NULL, pass.package=NULL, use.defaults=TRUE, docName = 'main_document',documentClass='report',fontsize='10pt',overwrite = FALSE){
    #returns filename, filelocation, fullpath as a list
+
    parent.location = makeParent_location(parentDir = parentDir, docName = docName)
 
    #create empty parent file
@@ -18,16 +19,23 @@ makeParent = function(parentDir = NULL, docName = 'main_document',overwrite = FA
       file.create(parent.location$fullpath)
 
       #get header information 
-      header = makeParent_header(gsub('.rnw','',parent.location[[1]]),'imouzon')
+      comment.header = makeParent_header(gsub('.rnw','',parent.location[[1]]),'imouzon')
       
-      #add header to file
-      write(header,file=parent.location$fullpath,append=TRUE)
+      #get the packages to use packages to file
+      package.list = makeParent_addPackages(package.list=package.list,pass.package=pass.package,use.defaults=use.defaults)
 
-      #add packages to file
-      package.list = makeParent_addPackages()
-      write(package.list,file=parent.location$fullpath,append=TRUE)
+      #template for document class line
+      doc.temp = paste0('\\documentclass[',fontsize,']{',documentClass,'}\n')
 
-      msg = paste('The parent directory has been created:',parent.location$fullpath)
+      #create document header
+      doc.header = paste0(package.list$PTPO,doc.temp,package.list$packages,collapse='\n')
+
+      #create document values
+      document = paste(comment.header,doc.header,special.opts,'\n\\begin{document}','\n\n','\n\\end{document}',sep='\n')
+
+      write(document,file=parent.location$fullpath,append=FALSE)
+
+      msg = paste('The parent document has been created:',parent.location$fullpath)
       message(msg)
    }
 
