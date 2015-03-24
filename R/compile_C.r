@@ -6,14 +6,15 @@
 #' @export
 
 verbatim.paste = function(txt) paste0('\n\\begin{verbatim}\n',txt,'\n\\end{verbatim}\n',collapse='')
-compile_C = function(filename,flags=''){
+compile_C = function(filename,arg='',flags=''){
    gcc.Call = 'gcc -Wall -ansi -pedantic filename.c -o filename.out flags'
    gcc.Call = gsub('flags',flags,gcc.Call)
    gcc.Call = gsub('filename',filename,gcc.Call)
    system(gcc.Call)
 
-   exec.Call = './filename.out'
+   exec.Call = './filename.out arg'
    exec.Call = gsub('filename',filename,exec.Call)
+   exec.Call = gsub('arg',arg,exec.Call)
    res = system(exec.Call,intern=TRUE)
 
    #print results
