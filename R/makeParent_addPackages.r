@@ -7,10 +7,6 @@
 #' makeParent_addPackages(package.opts = list('formatHW' = c('TA','STAT602')))
 
 makeParent_addPackages = function(package.list=NULL,pass.package=NULL,use.defaults=TRUE){
-   package.list=NULL
-   pass.package=NULL
-   use.defaults=TRUE
-
    package.template = function(i){
       pkg.tmp = paste0('{',names(package.list)[i],'}\n')
       if(is.null(package.list[[i]])){
