@@ -7,15 +7,18 @@
 #' makeParent_addPackages(package.opts = list('formatHW' = c('TA','STAT602')))
 
 makeParent_addPackages = function(package.list=NULL,pass.package=NULL,use.defaults=TRUE){
+   package.list=NULL
+   pass.package=NULL
+   use.defaults=TRUE
 
    package.template = function(i){
-      pkg.tmp = paste0('\\usepackage{',names(package.list)[i],'}')
+      pkg.tmp = paste0('{',names(package.list)[i],'}\n')
       if(is.null(package.list[[i]])){
-         opt.tmp = '\n'
+         opt.tmp = ''
       }else{
-          opt.tmp = paste0('[',paste(package.list[[i]],collapse=','),']\n')
+          opt.tmp = paste0('[',paste(package.list[[i]],collapse=','),']')
       }
-      return(paste0(pkg.tmp,opt.tmp))
+      return(paste0('\\usepackage',opt.tmp,pkg.tmp))
    }
 
    #DOC.Tempate = paste(c('POTP','DOCTYPE','PCKGS','DOCBEG','DOCEND'),collapse='\\n')
@@ -84,6 +87,4 @@ makeParent_addPackages = function(package.list=NULL,pass.package=NULL,use.defaul
    pass.package = paste0('\\PassOptionsToPackage{',names(pass.package),'}{',pass.package,'}\n')
 
    return(list('packages'=package.list,'PTPO'=pass.package))
-   return(ret)
 }
-
