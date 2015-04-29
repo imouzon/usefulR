@@ -7,7 +7,7 @@
 #' @examples
 #' makeParent(parentDir = '~/courses/cs511/code_bank')
 
-makeParent = function(parentDir = NULL, package.list = NULL, special.opts = NULL, pass.package=NULL, use.defaults=TRUE, docName = 'main_document',documentClass='report',fontsize='10pt',overwrite = FALSE){
+makeParent = function(parentDir = NULL, package.list = NULL, special.opts = NULL, type="tex", pass.package=NULL, use.defaults=TRUE, docName = 'main_document', documentClass='report', fontsize='10pt', overwrite = FALSE){
    #returns filename, filelocation, fullpath as a list
 
    parent.location = makeParent_location(parentDir = parentDir, docName = docName)
@@ -32,6 +32,11 @@ makeParent = function(parentDir = NULL, package.list = NULL, special.opts = NULL
 
       #create document values
       document = paste(comment.header,doc.header,special.opts,'\n\\begin{document}','\n\n','\n\\end{document}',sep='\n')
+
+      if(type == "markdown"){
+         gsub('usepackage.*formatHW','usepackage[$author$,$course$]{formatHW',document)
+         gsub("\\end.document.*","\\begin{document}\n\\HWinfo{$date$}{}{}\n\\titleheaderA{$title$}\n\n$body$\n\\end{document}",document)
+      }
 
       write(document,file=parent.location$fullpath,append=FALSE)
 
