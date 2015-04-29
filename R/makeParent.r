@@ -8,6 +8,16 @@
 #' makeParent(parentDir = '~/courses/cs511/code_bank')
 
 makeParent = function(parentDir = NULL, package.list = NULL, special.opts = NULL, type="tex", pass.package=NULL, use.defaults=TRUE, docName = 'main_document', documentClass='report', fontsize='10pt', overwrite = FALSE){
+parentDir = "/Users/user/dmc2015/ian/"
+package.list = NULL
+special.opts = NULL
+type="markdown"
+pass.package=NULL
+use.defaults=TRUE
+docName = 'main_document'
+documentClass='report'
+fontsize='10pt'
+overwrite = FALSE
    #returns filename, filelocation, fullpath as a list
 
    parent.location = makeParent_location(parentDir = parentDir, docName = docName)
@@ -35,8 +45,8 @@ makeParent = function(parentDir = NULL, package.list = NULL, special.opts = NULL
 
       if(type == "markdown"){
          message("Trying to use markdown")
-         gsub('usepackage.*formatHW','usepackage[$author$,$course$]{formatHW',document)
-         gsub("\\end.document.*","\\begin{document}\n\\HWinfo{$date$}{}{}\n\\titleheaderA{$title$}\n\n$body$\n\\end{document}",document)
+         document = gsub('usepackage.*formatHW','usepackage[$author$,$course$]{formatHW',document)
+         document = gsub("\\\\end\\{document\\}","\\\\HWinfo{$date$}{}{}\n\\\\titleheaderA{$title$}\n\n$body$\n\\\\end{document}",document)
          parent.location$fullpath = gsub("rnw","latex",parent.location$fullpath)
       }
 
