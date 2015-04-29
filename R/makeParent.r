@@ -44,8 +44,7 @@ overwrite = FALSE
       document = paste(comment.header,doc.header,special.opts,'\n\\begin{document}','\n\n','\n\\end{document}',sep='\n')
 
       if(type == "markdown"){
-         message("Trying to use markdown")
-         document = gsub('usepackage.*formatHW','usepackage[$author$,$course$]{formatHW',document)
+         document = gsub('usepackage\\[[[:alnum:]]+,[[:alnum:]]+\\]\\{formatHW','usepackage[$author$,$course$]{formatHW',document)
          document = gsub("\\\\end\\{document\\}","\\\\HWinfo{$date$}{}{}\n\\\\titleheaderA{$title$}\n\n$body$\n\\\\end{document}",document)
          parent.location$fullpath = gsub("rnw","latex",parent.location$fullpath)
       }
