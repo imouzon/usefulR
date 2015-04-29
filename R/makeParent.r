@@ -34,8 +34,10 @@ makeParent = function(parentDir = NULL, package.list = NULL, special.opts = NULL
       document = paste(comment.header,doc.header,special.opts,'\n\\begin{document}','\n\n','\n\\end{document}',sep='\n')
 
       if(type == "markdown"){
+         message("Trying to use markdown")
          gsub('usepackage.*formatHW','usepackage[$author$,$course$]{formatHW',document)
          gsub("\\end.document.*","\\begin{document}\n\\HWinfo{$date$}{}{}\n\\titleheaderA{$title$}\n\n$body$\n\\end{document}",document)
+         parent.location$fullpath = gsub("rnw","latex",parent.location$fullpath)
       }
 
       write(document,file=parent.location$fullpath,append=FALSE)

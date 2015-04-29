@@ -5,8 +5,9 @@
 \title{Keep the parent document simple}
 \usage{
 makeParent(parentDir = NULL, package.list = NULL, special.opts = NULL,
-  pass.package = NULL, use.defaults = TRUE, docName = "main_document",
-  documentClass = "report", fontsize = "10pt", overwrite = FALSE)
+  type = "tex", pass.package = NULL, use.defaults = TRUE,
+  docName = "main_document", documentClass = "report", fontsize = "10pt",
+  overwrite = FALSE)
 }
 \arguments{
 \item{parentDir}{character value, optional argument}
