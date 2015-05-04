@@ -1,0 +1,120 @@
+% For LaTeX-Box: root = 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  File Name:
+%  Purpose:
+%
+%  Creation Date: 04-05-2015
+%  Last Modified: Mon May  4 14:28:15 2015
+%  Created By:
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% example yaml
+% ---
+% title: Homework 2
+% titleshort: HW 2
+% instructions: Submit all code; show all methods
+% author: Ian Mouzon
+% authorshort: Mouzon
+% contact: imouzon@iastate.edu
+% grouplong: Machine Learning
+% groupshort: STAT 602
+% leader: Dr. Stephen Vardeman
+% leadershort: Vardeman
+% semester: Spring 2014
+% assignment: Problem 1 - 5
+% duedate: Monday May 4, 2015
+% output:
+%   usefulR::hw_template:
+% ---
+
+\PassOptionsToPackage{xcolor}{usenames,dvipsnames,svgnames,table}
+\documentclass[10pt]{report}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{pdfcolmk}
+\usepackage{multirow}
+\usepackage{graphicx}
+\usepackage{pifont}
+\usepackage{amsmath,amsfonts,amsthm,amssymb}
+\usepackage{setspace}
+\usepackage{Tabbing}
+\usepackage{etoolbox}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{listings}
+\usepackage{extramarks}
+\usepackage{enumerate}
+\usepackage{soul,color}
+\usepackage{graphicx,float,wrapfig}
+\usepackage{amsmath,amssymb,rotating}
+\usepackage{epsfig}
+\usepackage{color}
+\usepackage{hyperref}
+\usepackage{animate}
+\usepackage{array}
+\usepackage{graphics, color}
+\usepackage{graphicx}
+\usepackage{epsfig}
+\usepackage{setspace}
+\usepackage{verbatim}
+\usepackage[margin=1.0in]{geometry}
+\usepackage{tikz}
+\usepackage{mdframed}
+\usepackage{clrscode3e}
+\usepackage{formalHW}
+%\usepackage[$author$,$course$]{formatHW}
+\usepackage{fancyquote}
+\usepackage{fancyenvironments}
+\usepackage{mymathmacros}
+\usepackage{algorithm}
+\usepackage[noend]{algpseudocode}
+\usepackage{pgfplots}
+
+%set up fancy page header
+%$if(contact)$
+%$endif$
+
+\pagestyle{fancy}
+   \lhead{$contact$}
+   \lhead{authorshort}
+   \chead{$groupshort$\ ($leadershort$\ $semester$): $titleshort$}  
+   \rhead{\firstxmark}
+   \lfoot{\lastxmark}
+   \cfoot{}
+   \rfoot{Page\ \thepage\ of\ \pageref{LastPage}}
+   \renewcommand\headrulewidth{0.4pt}
+   \renewcommand\footrulewidth{0.4pt}
+
+\begin{document}
+
+%make title:
+\makeatletter
+\newcommand{\titleheader}{
+    \thispagestyle{empty}%
+    \begin{center}%
+       \renewcommand{\arraystretch}{1.5}%
+       \begin{tabular}{c}%
+          \Large{$groupshort$: $grouplong$}\\
+          $title$\\
+          $semester$, $leader$\\
+       \end{tabular}
+    \end{center}
+
+    \begin{center}
+       \renewcommand{\arraystretch}{1.5}
+       \begin{tabular*}{0.65\textwidth}{r@{:\hspace{.3cm}}l}
+          \hline
+          Name& $author$\\
+          email& $contact$\\
+          Instructions& $instructions$\\
+          Assignment& $assignment$\\
+          Due Date&  $duedate$\\
+          \hline
+       \end{tabular*}
+    \end{center}
+}
+\makeatother
+
+$body$
+
+\end{document}
