@@ -2,7 +2,7 @@
 #'
 #' Purpose: 
 #' Creation Date: 01-05-2015
-#' Last Modified: Mon May  4 16:52:20 2015
+#' Last Modified: Mon May  4 17:26:36 2015
 #'
 #' @param fig_width numeric value, optional argument (default 5)
 #' @param fig_height numeric value optional argument (default 5)
