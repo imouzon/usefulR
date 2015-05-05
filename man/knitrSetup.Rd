@@ -4,12 +4,24 @@
 \alias{knitrSetup}
 \title{Set knitr up the way I like it}
 \usage{
-knitrSetup(rootDir = FALSE, use.tikz = FALSE)
+knitrSetup(rootDir = getwd(), use.tikz = FALSE, cache.use.time = FALSE,
+  fig.folder = "graphics", fig.prefix = "fig_", cache.folder = "cache",
+  cache.prefix = "out_", formatR.arrow = TRUE, code.width = 50,
+  fig.height = 5, fig.width = 5, fig.align = "center",
+  fig.show = "hold", crop = TRUE, tidy = TRUE, fig.pos = "H",
+  par = TRUE, tikzLatex = "/usr/texbin/pdflatex", tikz.sanitize = TRUE,
+  tikz.crop = TRUE, return_opts = NULL)
 }
 \arguments{
-\item{rootDir}{character value, optional argument}
+\item{rootDir}{character value, optional argument (defaults to working directory)}
 
-\item{use.tikz}{logical value, optional argument}
+\item{use.tikz}{logical value, optional argument (default FALSE)}
+
+\item{cache.use.time}{logical value, optional argument (default FALSE)}
+
+\item{fig.folder}{character value, optional argument (default 'graphics')}
+
+\item{fig.prefix}{character value, optional argument (default 'fig_')}
 }
 \description{
 This code sets some of the values for knitr that I like.

@@ -16,12 +16,12 @@ merge_lists(lists, append.lists = TRUE, descending.priority = FALSE)
 \description{
 Purpose: merge two or more lists together
 Creation Date: 19-03-2015
-Last Modified: Fri Mar 20 00:02:17 2015
+Last Modified: Mon May  4 17:48:23 2015
 }
 \examples{
 list1 = list('dogs'=c('chows','beagles'), cows='milk', food = 'hot dogs')
 list2 = list('dogs'='doberman', cows=c('milk','beef'), friends = 'nick')
 list3 = list('dogs'='puppy', cows=c('barnyard','beef'), girls='peach', friends = 'ian')
-merge_lists(list(list1,list2,list3))
+usefulR::merge_lists(list(list1,list2,list3))
 }
 

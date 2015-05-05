@@ -1,16 +1,10 @@
-#' Purpose: template
-#' Creation Date: 01-05-2015
-#' Last Modified: Mon May  4 17:29:00 2015
-#'
-#' @export
-
 % For LaTeX-Box: root = 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %  File Name:
 %  Purpose:
 %
 %  Creation Date: 04-05-2015
-%  Last Modified: Mon May  4 17:26:55 2015
+%  Last Modified: Mon May  4 18:37:05 2015
 %  Created By:
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -91,35 +85,40 @@
    \renewcommand\headrulewidth{0.4pt}
    \renewcommand\footrulewidth{0.4pt}
 
+% pandoc syntax highlighting
+$if(highlighting-macros)$
+$highlighting-macros$
+$endif$
+
+$for(header-includes)$
+$header-includes$
+$endfor$
+
 \begin{document}
 
 %make title:
-\makeatletter
-\newcommand{\titleheader}{
-    \thispagestyle{empty}%
-    \begin{center}%
-       \renewcommand{\arraystretch}{1.5}%
-       \begin{tabular}{c}%
-          \Large{$groupshort$: $grouplong$}\\
-          $title$\\
-          $semester$, $leader$\\
-       \end{tabular}
-    \end{center}
+\thispagestyle{empty}%
+\begin{center}%
+    \renewcommand{\arraystretch}{1.5}%
+    \begin{tabular}{c}%
+       \Large{$groupshort$: $grouplong$}\\
+       $title$\\
+       $semester$, $leader$\\
+    \end{tabular}
+\end{center}
 
-    \begin{center}
-       \renewcommand{\arraystretch}{1.5}
-       \begin{tabular*}{0.65\textwidth}{r@{:\hspace{.3cm}}l}
-          \hline
-          Name& $author$\\
-          email& $contact$\\
-          Instructions& $instructions$\\
-          Assignment& $assignment$\\
-          Due Date&  $duedate$\\
-          \hline
-       \end{tabular*}
-    \end{center}
-}
-\makeatother
+\begin{center}
+ \renewcommand{\arraystretch}{1.5}
+ \begin{tabular*}{0.65\textwidth}{r@{:\hspace{.3cm}}l}
+    \hline
+    Name& $author$\\
+    email& $contact$\\
+    Instructions& $instructions$\\
+    Assignment& $assignment$\\
+    Due Date&  $duedate$\\
+    \hline
+ \end{tabular*}
+\end{center}
 
 $body$
 

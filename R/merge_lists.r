@@ -2,7 +2,7 @@
 #'
 #' Purpose: merge two or more lists together
 #' Creation Date: 19-03-2015
-#' Last Modified: Mon May  4 16:49:18 2015
+#' Last Modified: Mon May  4 17:48:23 2015
 #'
 #' @param lists a list of list, optional argument
 #' @param append.lists logical argument, optional argument
@@ -17,7 +17,6 @@
 
 merge_lists = function(lists,append.lists=TRUE,descending.priority=FALSE){
    #remove lists that are null
-   lists = list(format$knitr$opts_knit, knitrSetup.opts$knitr$opts_knit)
    lists.in = lists
    for(i in length(lists):1){
       if(is.null(names(lists[[i]]))){
@@ -29,11 +28,12 @@ merge_lists = function(lists,append.lists=TRUE,descending.priority=FALSE){
          }
       }
    }
-   if(length(lists) == 0){
+   if(length(lists) <= 1){
       return(lists.in[[1]])
    }
    sapply(1:length(lists), function(i) is.null(lists[[i]]))
    if(descending.priority) lists = lists[length(lists):1]
+   l1 = lists[[1]]
    for(i in 2:length(lists)){
       l2 = lists[[i]]
       common.names = names(l1)[which(names(l1) %in% names(l2))]
