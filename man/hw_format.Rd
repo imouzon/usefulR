@@ -27,12 +27,10 @@ hw_format(rootDir = getwd(), fig_width = 5, fig_height = 5,
 \item{pandoc_args}{= NULL, optional argument}
 
 \item{paramname}{integer value, optional argument}
-
-\item{docName}{character value, optional argument}
 }
 \description{
 Purpose:
 Creation Date: 01-05-2015
-Last Modified: Mon May  4 18:40:43 2015
+Last Modified: Thu May  7 10:09:20 2015
 }
 
