@@ -10,7 +10,7 @@
 makeParent = function(parentDir = NULL, package.list = NULL, special.opts = NULL, type="tex", pass.package=NULL, use.defaults=TRUE, docName = 'main_document', documentClass='report', fontsize='10pt', overwrite = FALSE){
    #returns filename, filelocation, fullpath as a list
 
-   parent.location = makeParent_location(parentDir = parentDir, docName = docName)
+   parent.location = usefulR::makeParent_location(parentDir = parentDir, docName = docName)
    if(type == "markdown") parent.location$fullpath = gsub("rnw","latex",parent.location$fullpath)
 
    #create empty parent file
@@ -20,10 +20,10 @@ makeParent = function(parentDir = NULL, package.list = NULL, special.opts = NULL
       file.create(parent.location$fullpath)
 
       #get header information 
-      comment.header = makeParent_header(gsub('.rnw','',parent.location[[1]]),'imouzon')
+      comment.header = usefulR::makeParent_header(gsub('.rnw','',parent.location[[1]]),'imouzon')
       
       #get the packages to use packages to file
-      package.list = makeParent_addPackages(package.list=package.list,pass.package=pass.package,use.defaults=use.defaults)
+      package.list = usefulR::makeParent_addPackages(package.list=package.list,pass.package=pass.package,use.defaults=use.defaults)
 
       #template for document class line
       doc.temp = paste0('\\documentclass[',fontsize,']{',documentClass,'}\n')

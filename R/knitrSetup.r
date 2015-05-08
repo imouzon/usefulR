@@ -69,7 +69,7 @@ knitrSetup = function(rootDir=getwd(), use.tikz=FALSE, cache.use.time=FALSE, fig
    if(is.null(return_opts)){
       opts_knit$set(knitrSetup_knit_opts)
       opts_chunk$set(knitrSetup_chunk_opts)
-      knitr_hooks$set(knitrSetup_hooks_opts)
+      knit_hooks$set(knitrSetup_hooks_opts)
       options(Roptions)
    }else{
       return_opts = list("knitr" = list("opts_knit"=knitrSetup_knit_opts, "opts_chunk" = knitrSetup_chunk_opts, "knit_hooks" = knitrSetup_hooks_opts),"R" = Roptions)

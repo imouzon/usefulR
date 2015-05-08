@@ -2,7 +2,7 @@
 #'
 #' Purpose: 
 #' Creation Date: 01-05-2015
-#' Last Modified: Mon May  4 18:40:43 2015
+#' Last Modified: Thu May  7 10:09:20 2015
 #'
 #' @param fig_width numeric value, optional argument (default 5)
 #' @param fig_height numeric value optional argument (default 5)
@@ -13,13 +13,16 @@
 #' @param includes = NULL, optional argument
 #' @param pandoc_args = NULL, optional argument
 #' @param paramname integer value, optional argument
-#' @param docName character value, optional argument
 #' @export
 
 hw_format = function(rootDir = getwd(), fig_width = 5, fig_height = 5, use_tikz=FALSE, fig_crop=TRUE, dev = "pdf", highlight="default", keep_tex=FALSE, includes=NULL, pandoc_args=NULL, knitrSetup=TRUE){
+   library(rmarkdown)
    if (identical(highlight, "default")) highlight = "pygments"
-   #template = system.file("/templates/hw_template/resources/hw_template.tex",package="usefulR")
-   template = "/Users/user/R/packages/usefulR/templates/hw_template/resources/hw_template.tex"
+   # 
+   template = system.file("rmarkdown/templates/tufte_handout/resources/tufte-handout.tex")
+   # template = system.file("templates/hw_template/resources/hw_template.tex",package="usefulR")
+   # template = "/Users/user/R/packages/usefulR/templates/hw_template/resources/hw_template.tex"
+   message("Using the template at: ",template)
    format = rmarkdown::pdf_document(number_sections = TRUE, fig_caption = TRUE, dev = dev, highlight = highlight, template = template, keep_tex = TRUE, latex_engine = "pdflatex", includes = includes, pandoc_args = NULL)
    print(format)
    if(knitrSetup){

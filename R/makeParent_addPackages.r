@@ -2,7 +2,6 @@
 #'
 #' This code sets some of the values for knitr that I like.
 #' @param all_packges logical value, optional argument
-#' @export
 #' @examples
 #' makeParent_addPackages(package.opts = list('formatHW' = c('TA','STAT602')))
 

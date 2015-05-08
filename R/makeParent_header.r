@@ -3,7 +3,6 @@
 #' This code sets some of the values for knitr that I like.
 #' @param parentDir character value, optional argument
 #' @param docName character value, optional argument
-#' @export
 #' @examples
 #' makeParent_header(filename,creator)
 
