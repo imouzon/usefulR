@@ -31,6 +31,6 @@ hw_format(rootDir = getwd(), fig_width = 5, fig_height = 5,
 \description{
 Purpose:
 Creation Date: 01-05-2015
-Last Modified: Fri May  8 17:35:33 2015
+Last Modified: Fri May  8 17:37:59 2015
 }
 
