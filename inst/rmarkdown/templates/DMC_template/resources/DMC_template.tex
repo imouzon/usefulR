@@ -43,13 +43,7 @@
 
 %set up fancy page header
 \pagestyle{fancy}
-   $if(contact)$
-      \lhead{$contact$}
-   $endif$
-   $if(contact)$
-      \lhead{$authorshort$}
-   $endif$
-   \chead{$groupshort$\ ($leadershort$,\ $semester$): $titleshort$}  
+   \chead{DMC@ISU:\ $titleshort$}  
    \rhead{\firstxmark}
    \lfoot{\lastxmark}
    \cfoot{}
@@ -73,9 +67,9 @@ $endfor$
 \begin{center}%
     \renewcommand{\arraystretch}{1.5}%
     \begin{tabular}{c}%
-       \Large{$groupshort$: $grouplong$}\\
+       \Large{DMC@ISU: The 2015 Iowa State University Data Mining Cup Team}\\
        $title$\\
-       $if(semester)$$semester$,$endif$ $if(leader)$$leader$$endif$ \\
+       Spring 2015, A Team as Strong as Steel \\
     \end{tabular}
 \end{center}
 
@@ -85,9 +79,7 @@ $endfor$
     \hline
     $if(author)$ Name& $author$\\$endif$
     $if(contact)$ email& $contact$\\$endif$
-    $if(instructions)$ Task& $instructions$\\$endif$
-    $if(assignment)$ Results& $assignment$\\$endif$
-    $if(duedate)$ Due Date&  $duedate$\\$endif$
+    Last Day&  May 19, 2015\\
     \hline
  \end{tabular*}
 \end{center}
