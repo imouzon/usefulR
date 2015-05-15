@@ -2,7 +2,7 @@
 #'
 #' Purpose: 
 #' Creation Date: 01-05-2015
-#' Last Modified: Fri May  8 19:40:08 2015
+#' Last Modified: Fri May 15 10:31:19 2015
 #'
 #' @param fig_width numeric value, optional argument (default 5)
 #' @param fig_height numeric value optional argument (default 5)
@@ -15,10 +15,10 @@
 #' @param paramname integer value, optional argument
 #' @export
 
-hw_format = function(rootDir = getwd(), fig_width = 5, fig_height = 5, use_tikz=FALSE, fig_crop=TRUE, dev = "pdf", highlight="default", keep_tex=FALSE, includes=NULL, pandoc_args=NULL, knitrSetup=TRUE){
+DMC_format = function(rootDir = getwd(), fig_width = 5, fig_height = 5, use_tikz=FALSE, fig_crop=TRUE, dev = "pdf", highlight="default", keep_tex=FALSE, includes=NULL, pandoc_args=NULL, knitrSetup=TRUE){
    library(rmarkdown)
    if (identical(highlight, "default")) highlight = "pygments"
-   template = system.file("rmarkdown/templates/hw_template/resources/hw_template.tex",package="usefulR")
+   template = system.file("rmarkdown/templates/DMC_template/resources/DMC_template.tex",package="usefulR")
    message(paste("Using the template at: ",template))
    format = rmarkdown::pdf_document(number_sections = TRUE, fig_caption = TRUE, dev = dev, highlight = highlight, template = template, keep_tex = TRUE, latex_engine = "pdflatex", includes = includes, pandoc_args = NULL)
    print(format)

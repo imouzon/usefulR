@@ -1,0 +1,18 @@
+---
+name: DMC
+title: 
+titleshort:
+instructions:
+author: 
+authorshort: 
+contact: imouzon@iastate.edu
+grouplong: Iowa State University Data Mining Cup Team 2015
+groupshort: DMC@ISU
+leader: A Team as Strong as Steel
+leadershort: ISU 
+semester: Spring 2015
+assignment: 
+duedate: May 19, 2015
+output:
+  usefulR::DMC_template
+---
