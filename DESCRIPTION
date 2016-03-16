@@ -6,3 +6,4 @@ Version: 0.1
 Author: Ian Mouzon <imouzon@iastate.edu>
 Maintainer: Ian Mouzon <imouzon@iastate.edu>
 License: MIT
+RoxygenNote: 5.0.1

@@ -1,0 +1,21 @@
+---
+title: Presentation Title
+tabtitle: Name in Tab
+csstemplate: "www/css/remark_presentation.css"
+highlightStyle: monokai
+highlightLanguage: remark
+author-meta: Ian Mouzon
+keywords-meta: Keywords for searching
+description-meta: How the page will be described in search results
+date-meta: January 20, 2015
+output: usefulR::remark_template:
+   fig_width: 5
+   fig_height: 5
+   fig_crop: true
+   dev: "png"
+   highlight: "default"
+   keep_tex: false
+   includes: null
+   pandoc_args: null
+   knitrSetup: true
+---

@@ -1,3 +1,13 @@
+example yaml
+---
+title: Projection Pursuit
+titleshort: Proj. Purs.
+semester: Fall 2015
+meetingdate: Monday May 4, 2015
+output:
+  usefulR::research_format
+---
+
 \PassOptionsToPackage{xcolor}{usenames,dvipsnames,svgnames,table}
 \documentclass[10pt]{report}
 \usepackage[T1]{fontenc}
@@ -33,7 +43,7 @@
 \usepackage{mdframed}
 \usepackage{clrscode3e}
 \usepackage{formalHW}
-\usepackage[$authorshort$,none]{formatHW}
+%\usepackage[$author$]{formatHW}
 \usepackage{fancyquote}
 \usepackage{fancyenvironments}
 \usepackage{mymathmacros}
@@ -43,13 +53,23 @@
 
 %set up fancy page header
 \pagestyle{fancy}
-   $if(contact)$
-      \lhead{$contact$}
+$if(contact)$
+   \lhead{$contact$}
+$endif$
+$if(contact)$
+   \lhead{$authorshort$}
+$endif$
+   \chead{
+   $groupshort$\ 
+   (
+   $if(leadershort)$
+   $leadershort$,\ 
    $endif$
-   $if(authorshort)$
-      \lhead{$authorshort$}
+   $if(semester)$
+   $semester$
    $endif$
-   \chead{$groupshort$\ ($leadershort$,\ $semester$): $titleshort$}  
+   ): 
+   $titleshort$}  
    \rhead{\firstxmark}
    \lfoot{\lastxmark}
    \cfoot{}
@@ -62,7 +82,6 @@ $if(highlighting-macros)$
 $highlighting-macros$
 $endif$
 
-% header includes
 $for(header-includes)$
 $header-includes$
 $endfor$
@@ -83,11 +102,11 @@ $endfor$
  \renewcommand{\arraystretch}{1.5}
  \begin{tabular*}{0.65\textwidth}{r@{:\hspace{.3cm}}l}
     \hline
-    $if(author)$ Name& $author$\\$endif$
-    $if(contact)$ email& $contact$\\$endif$
-    $if(instructions)$ Instructions& $instructions$\\$endif$
-    $if(assignment)$ Assignment& $assignment$\\$endif$
-    $if(duedate)$ Due Date&  $duedate$\\$endif$
+    if($author$)$ Name& $author$\\$endif$
+    if($contact$) email& $contact$\\$endif$
+    if($instructions$) Instructions& $instructions$\\$endif$
+    if($assignment$) Assignment& $assignment$\\$endif$
+    if($duedate$) Due Date&  $duedate$\\$endif$
     \hline
  \end{tabular*}
 \end{center}

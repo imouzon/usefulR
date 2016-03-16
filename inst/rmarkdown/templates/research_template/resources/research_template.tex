@@ -1,5 +1,5 @@
 \PassOptionsToPackage{xcolor}{usenames,dvipsnames,svgnames,table}
-\documentclass[10pt]{report}
+\documentclass[10pt]{article}
 \usepackage[T1]{fontenc}
 \usepackage{lmodern}
 \usepackage{pdfcolmk}
@@ -43,13 +43,9 @@
 
 %set up fancy page header
 \pagestyle{fancy}
-   $if(contact)$
-      \lhead{$contact$}
-   $endif$
-   $if(authorshort)$
-      \lhead{$authorshort$}
-   $endif$
-   \chead{$groupshort$\ ($leadershort$,\ $semester$): $titleshort$}  
+   \lhead{imouzon@iastate.edu}
+   \lhead{Mouzon}
+   \chead{Advisor Meeting\ (Nordman,\ Vardeman)\ $semester$): $titleshort$}  
    \rhead{\firstxmark}
    \lfoot{\lastxmark}
    \cfoot{}
@@ -73,9 +69,9 @@ $endfor$
 \begin{center}%
     \renewcommand{\arraystretch}{1.5}%
     \begin{tabular}{c}%
-       \Large{$groupshort$: $grouplong$}\\
-       $title$\\
-       $if(semester)$$semester$,$endif$ $if(leader)$$leader$$endif$ \\
+       \Large{Advisor Meeting: $title$}\\
+       Dr. Dan Nordman and Dr. Stephen Vardeman \\
+       $if(semester)$$semester$,$endif$ Meeting $meetingdate$\\
     \end{tabular}
 \end{center}
 
@@ -83,11 +79,9 @@ $endfor$
  \renewcommand{\arraystretch}{1.5}
  \begin{tabular*}{0.65\textwidth}{r@{:\hspace{.3cm}}l}
     \hline
-    $if(author)$ Name& $author$\\$endif$
-    $if(contact)$ email& $contact$\\$endif$
-    $if(instructions)$ Instructions& $instructions$\\$endif$
-    $if(assignment)$ Assignment& $assignment$\\$endif$
-    $if(duedate)$ Due Date&  $duedate$\\$endif$
+    Name& Ian Mouzon\\
+    email& imouzon@iastate.edu\\
+    Date&  $meetingdate$\\
     \hline
  \end{tabular*}
 \end{center}
